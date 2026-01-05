@@ -1,8 +1,8 @@
 【作品访问URL】
-https://jianzhaqigame.4b972e1d.er.aliyun-esa.net
+https://edgecraft.4b972e1d.er.aliyun-esa.net
 
 【Github仓库地址】
-https://github.com/jyxwant/JianZhaQi_game
+https://github.com/jyxwant/EdgeCraft
 
 【作品说明】
 
@@ -22,8 +22,8 @@ https://github.com/jyxwant/JianZhaQi_game
 1. 基于通义 Z-Image-Turbo 最新图像生成模型，实现专业级 Logo 创作
 2. 使用 React 19 + Vite 6 + TypeScript 现代前端技术栈
 3. 部署于阿里云 ESA Pages 边缘计算平台，全球加速访问
-4. 响应式设计，完美适配移动端与桌面端
-5. 采用代理转发解决 CORS 跨域问题，确保图片安全访问
+4. 使用 ESA 边缘函数实现 API 代理，安全隐藏 API Key
+5. 响应式设计，完美适配移动端与桌面端
 
 四、创意价值
 - 将 AI 技术与品牌设计场景结合，降低专业 Logo 设计门槛
