@@ -1,12 +1,11 @@
 import { LogoRequest } from "../types";
 import { LOGO_STYLES } from "../constants";
 
-// ModelScope Z-Image API 配置（通过 Vite 代理）
-const BASE_URL = '/api/modelscope/';
-const API_KEY = 'ms-f7b7ea5c-f046-4a6c-b7d8-0f6cc45e809e';
+// ModelScope Z-Image API 配置（通过边缘函数代理）
+const EDGE_PROXY = 'https://billowing-snowflake-6706.4b972e1d.er.aliyun-esa.net/api';
+const BASE_URL = `${EDGE_PROXY}/modelscope/`;
 
 const commonHeaders = {
-  "Authorization": `Bearer ${API_KEY}`,
   "Content-Type": "application/json",
 };
 
@@ -17,7 +16,7 @@ const fetchImageAsBase64 = async (imageUrl: string): Promise<string> => {
   // 将 OSS URL 转换为代理路径
   const proxyUrl = imageUrl.replace(
     'https://muse-ai.oss-cn-hangzhou.aliyuncs.com',
-    '/api/oss-image'
+    `${EDGE_PROXY}/oss-image`
   );
   
   const response = await fetch(proxyUrl);
